@@ -27,6 +27,6 @@ jobs:
       - name: Coverage report to Codecov
         uses: codecov/codecov-action@v4
       - name: Run pylint
-        run: poetry run pylint run --branch -m pytest
+        run: poetry run pylint src
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
